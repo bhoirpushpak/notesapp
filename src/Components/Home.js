@@ -37,6 +37,7 @@ const Home = () => {
         '#cede9c']
 
     let apiUrl = 'http://34.237.4.39/api/notes'
+    // let apiUrl = ' http://127.0.0.1:8000/api/notes'
 
     // GET notes from API
     useEffect(() => {
@@ -47,7 +48,7 @@ const Home = () => {
                     handleEmptyNote()
                 }else{
                     handleNonEmptyNote()
-                    getItems(data.response.data);
+                    getItems(data.response);
                 }
             })
             .catch((err) => {
@@ -112,11 +113,11 @@ const Home = () => {
                 <input type="hidden" ref={saveType} value="" />
                 <input type="hidden" ref={NoteType} value="" />
                 <Modal.Title style={{width:'100%'}} >
-                    <input type="text" ref={inputNoteTitle}  className="form-control no-border " placeholder={'What is this note about?'} id="note_title" />
+                    <input type="text" ref={inputNoteTitle}  className="form-control no-border " maxLength={50} placeholder={'What is this note about?'} id="note_title" />
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <textarea id="note_content" ref={inputNoteContent} className="form-control no-border" rows="15" placeholder={'Write a note..'} style={{resize: 'none'}}/>
+                <textarea id="note_content" ref={inputNoteContent} className="form-control no-border" maxLength={1000} rows="15" placeholder={'Write a note..'} style={{resize: 'none'}}/>
             </Modal.Body>
             <Modal.Footer>
                 <button id={'save-button'} className={'form-control btn btn-success'} onClick={()=>saveNote()}>Save</button>
