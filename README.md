@@ -4,7 +4,8 @@
 
 **App consumes external API service. You must run that in order to perform operations.**\
 if your API url is different please specify it in the app.\
-apiUrl can be specified in **Home.js** and **ViewNote.js**
+apiUrl can be specified in **Home.js** and **ViewNote.js**\
+API also hosted on http://34.237.4.39
 
 Open Terminal and execute following commands\
 
