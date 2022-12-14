@@ -9,7 +9,7 @@ function ViewNote(){
     let { noteSlug } = useParams();
     const [Note, getNote] = useState([]);
 
-    let apiUrl = 'http://127.0.0.1:8000/api/notes'
+    let apiUrl = 'http://34.237.4.39/api/notes'
 
     // Grab Note data based on note slug
     useEffect(() => {

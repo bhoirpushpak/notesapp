@@ -36,7 +36,7 @@ const Home = () => {
         '#aeefe5','#e184d2','#83cc52','#ea6a6a',
         '#cede9c']
 
-    let apiUrl = 'http://127.0.0.1:8000/api/notes'
+    let apiUrl = 'http://34.237.4.39/api/notes'
 
     // GET notes from API
     useEffect(() => {
